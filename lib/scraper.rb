@@ -32,18 +32,18 @@ class Scraper
     doc.css("div.main-wrapper div.vitals-container").each do |info|
       info.css(".social-icon-container a").map { |link| link['href'] }.each do |x|
         if x.include?("twitter")
-          @twitter = x
+          twitter = x
         elsif x.include?("linkedin")
-          @linkedin = x
+          linkedin = x
         elsif x.include?("github")
-          @github = x
+          github = x
         else 
-          @blog = x
+          blog = x
         end
       end
     end
-    @profile_quote = doc.css("div.main-wrapper div.vitals-container").css("div.vitals-text-container").css("div.profile-quote").text
-    @bio = doc.css("div.main-wrapper").css("div.details-container").css("div.description-holder p").text
+    profile_quote = doc.css("div.main-wrapper div.vitals-container").css("div.vitals-text-container").css("div.profile-quote").text
+    bio = doc.css("div.main-wrapper").css("div.details-container").css("div.description-holder p").text
     @student_hash[:bio] = @bio
     @student_hash[:blog] = @blog
     @student_hash[:github] = @github
