@@ -22,31 +22,18 @@ class Student
   end
 
   def add_student_attributes(attributes_hash)
-    class User
-  attr_accessor :name, :user_name, :age, :location, :bio
- 
-  def initialize(attributes)
-    attributes.each {|key, value| self.send(("#{key}="), value)}
-  end
-end
-    
-    
-    
     attributes_hash.each{|key, value| self.send(("#{key}="), value)}
-      if key == ":twitter"
-        self.twitter=(value)
-    
-    
-    :twitter=, student_hash[:twitter], 
-      :linkedin=, student_hash[:linkedin], 
-      :github=, student_hash[:student], 
-      :blog=, student_hash[:blog], 
-      :profile_quote=, student_hash[:profile_quote], 
-      :bio=, student_hash[:bio], 
-  end
+  
+  #     :twitter=, student_hash[:twitter], 
+  #     :linkedin=, student_hash[:linkedin], 
+  #     :github=, student_hash[:student], 
+  #     :blog=, student_hash[:blog], 
+  #     :profile_quote=, student_hash[:profile_quote], 
+  #     :bio=, student_hash[:bio], 
+  # end
 
   def self.all
-    
+    @@all
   end
 end
 
