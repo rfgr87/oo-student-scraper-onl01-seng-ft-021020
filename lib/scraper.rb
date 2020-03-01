@@ -33,10 +33,13 @@ class Scraper
       info.css(".social-icon-container a").map { |link| link['href'] }.each do |x|
         if x.include?("twitter")
           twitter = x
+          @student_hash[:twitter] = twitter
         elsif x.include?("linkedin")
           linkedin = x
+          @student_hash[:linkedin] = linkedin
         elsif x.include?("github")
           github = x
+          @student_hash[:github] = github
         else 
           blog = x
         end
