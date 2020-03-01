@@ -51,7 +51,6 @@ class Scraper
     @student_hash[:bio] = bio
     @student_hash[:profile_quote] = profile_quote
     @student_hash
-    binding.pry
   end
 end        
         
