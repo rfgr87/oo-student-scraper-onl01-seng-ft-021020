@@ -48,12 +48,8 @@ class Scraper
     end
     profile_quote = doc.css("div.main-wrapper div.vitals-container").css("div.vitals-text-container").css("div.profile-quote").text
     bio = doc.css("div.main-wrapper").css("div.details-container").css("div.description-holder p").text
-    @student_hash[:bio] = @bio
-    @student_hash[:blog] = @blog
-    @student_hash[:github] = @github
-    @student_hash[:linkedin] = @linkedin
-    @student_hash[:twitter] = @twitter
-    @student_hash[:profile_quote] = @profile_quote
+    @student_hash[:bio] = bio
+    @student_hash[:profile_quote] = profile_quote
     @student_hash
     binding.pry
   end
