@@ -42,6 +42,7 @@ class Scraper
           @student_hash[:github] = github
         else 
           blog = x
+          @student_hash[:blog] =blog
         end
       end
     end
